@@ -1,32 +1,61 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+// ################## DECLARAÇÃO DE VARIÁVEIS
+    int bispo, torre, dama;
+    torre = 1;
+    bispo = 1;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+// ################# MOVIMENTAÇÃO DO BISPO COM *WHILE*
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    //Impressão na tela sobre o que vai acontecer
+    printf("Bispo está em c1 (Bc1.)\n");
+    printf("Jogador move o bispo 5 casas para a diagonal direita, para g5 (Bg5).\n");
+    printf("\n#1ª MOVIMENTAÇÃO DE PEÇA, BISPO:\n");
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    while (bispo < 5) {
+        printf("Movimento %d. ", bispo);
+        printf("Cima, Direita;\n");
+        bispo++;
+    }
+    
+    printf("Bispo chegou em g5!\n");
+    printf("====================================\n\n");
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+// ################# MOVIMENTAÇÃO DA TORRE COM *DO-WHILE*
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    // Impressão na tela sobre o que vai acontecer
+    printf("Torre está em a1 (Ta1).\n");
+    printf("Jogador move a torre 5 casas para a direita, para e1 (Te1).\n");
+    printf("\n#2ª MOVIMENTAÇÃO DE PEÇA, TORRE:\n");
+
+
+    do {
+        printf("Movimento %d. ", torre);
+        printf("Direita;\n");
+        torre++;
+    } while (torre < 5);
+
+    printf("Torre chegou em e1!\n");
+    printf("====================================\n\n");
+
+
+// ################# MOVIMENTAÇÃO DA DAMA COM *FOR*
+
+    //Impressão na tela sobre o que vai acontecer
+
+    printf("Dama está em h8 (Dh8).\n");
+    printf("Jogador move a dama 8 casas para a esquerda, para a8 (Da8).\n");
+    printf("\n#3ª MOVIMENTAÇÃO DE PEÇA, DAMA:\n");
+
+    for(dama = 1; dama < 8; dama++){
+        printf("Movimento %d. ", dama);
+        printf("Esquerda;\n");
+    };
+
+    printf("Dama chegou em a8!\n");
+    printf("====================================\n\n");
 
     return 0;
 }
